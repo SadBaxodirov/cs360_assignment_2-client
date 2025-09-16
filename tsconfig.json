@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "target": "ES2024",
+    "module": "node16",
+    "moduleResolution": "node16"
+  }
+}
