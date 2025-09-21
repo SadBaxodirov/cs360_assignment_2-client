@@ -7,7 +7,7 @@ function resolveUrl(url: string) {
 //get function
 export async function remoteGet(url: string) {
     try {
-        const response = await axios.get(url);
+        const response = await axios.get(resolveUrl(url));
         return response.data;
     } catch (e) {
         throw new Error(e);
@@ -16,7 +16,7 @@ export async function remoteGet(url: string) {
 //post function that takes data in form of JSON obj
 export async function remotePost(url: string, data: any) {
     try {
-        const response = await axios.post(url, data);
+        const response = await axios.post(resolveUrl(url), data);
         return response.data;
     } catch (e) {
         throw new Error(e);
@@ -25,7 +25,7 @@ export async function remotePost(url: string, data: any) {
 //delete function
 export async function remoteDelete(url: string) {
     try {
-        const response = await axios.delete(url);
+        const response = await axios.delete(resolveUrl(url) );
     } catch (e) {
         throw new Error(e);
     }
